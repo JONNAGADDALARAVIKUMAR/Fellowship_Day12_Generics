@@ -14,6 +14,7 @@ public class GenericsTestCasesClass {
 		
 		Integer[] genericArray = {29,34,76};
 		Comparable result =  classTcoCheck.checkMaximum(genericArray);
+		classTcoCheck.printMax(genericArray, "firstIntMaxValueTestCase()");
 		Assert.assertNotEquals(29, result);
 	}
 	@Test
@@ -21,6 +22,7 @@ public class GenericsTestCasesClass {
 		
 		Integer[] genericArray = {89,78,34};
 		Comparable result =  classTcoCheck.checkMaximum(genericArray);
+		classTcoCheck.printMax(genericArray, "firstIntMaxValueActual()");
 		Assert.assertEquals(89, result);
 	}
 	@Test
@@ -28,6 +30,7 @@ public class GenericsTestCasesClass {
 		
 		Integer[] genericArray = {24,8,18};
 		Comparable result =  classTcoCheck.checkMaximum(genericArray);
+		classTcoCheck.printMax(genericArray, "secondIntMaxValueTestCase()");
 		Assert.assertNotEquals(8, result);
 	}
 	@Test
@@ -35,6 +38,7 @@ public class GenericsTestCasesClass {
 		
 		Integer[] genericArray = {24,38,18};
 		Comparable result =  classTcoCheck.checkMaximum(genericArray);
+		classTcoCheck.printMax(genericArray, "secondIntMaxValueActual()");
 		Assert.assertEquals(38, result);
 	}
 	@Test
@@ -42,6 +46,7 @@ public class GenericsTestCasesClass {
 		
 		Integer[] genericArray = {43,34,10};
 		Comparable result =  classTcoCheck.checkMaximum(genericArray);
+		classTcoCheck.printMax(genericArray, "thirdIntMaxValueTestCase()");
 		Assert.assertNotEquals(10, result);
 	}
 	@Test
@@ -49,6 +54,7 @@ public class GenericsTestCasesClass {
 		
 		Integer[] genericArray = {23,20,43};
 		Comparable result =  classTcoCheck.checkMaximum(genericArray);
+		classTcoCheck.printMax(genericArray, "thirdIntMaxValueActual()");
 		Assert.assertEquals(43, result);
 	}
 }

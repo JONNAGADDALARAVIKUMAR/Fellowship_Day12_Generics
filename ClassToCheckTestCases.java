@@ -2,24 +2,15 @@ package day12;
 
 public class ClassToCheckTestCases <T extends Comparable<T>> {
 
-	T returnValue;
-	public T checkMaximum(T firstStiring, T secondString, T thirdString) {
+	T max;
+	public T checkMaximum(T[] genericList) {
 		
-		//Returns First Value if it is Maximum
-		if(firstStiring.compareTo(secondString) > 0 && firstStiring.compareTo(thirdString) > 0) {
-		
-			returnValue = firstStiring;
+		max = genericList[0];
+		for(int i=1; i < genericList.length; i++) {
+			if(genericList[i].compareTo(max) > 0) {
+				max = genericList[i];
+			}
 		}
-		//Returns Second Value if it is Maximum
-		else if(secondString.compareTo(firstStiring) > 0 && secondString.compareTo(thirdString) > 0) {
-			returnValue = secondString;
-		}
-		//Returns Third Value if it is Maximum
-		else if(thirdString.compareTo(firstStiring) > 0 && thirdString.compareTo(secondString) > 0) {
-			returnValue = thirdString;;
-		}
-		return returnValue;
+		return max;
 	}
-	
-	
 }

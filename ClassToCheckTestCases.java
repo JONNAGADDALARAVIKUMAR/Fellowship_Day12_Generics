@@ -6,10 +6,10 @@ import java.util.Optional;
 
 public class ClassToCheckTestCases {
 
-	public int checkMaximum(ArrayList<Integer> intArray) { //Returns Max Value
+	public Float checkMaximum(ArrayList<Float> floatArray) { //Returns Max Value
 		
-		Optional<Integer> result = intArray.stream() //Java Stream to Get Max Value
-				.max(Comparator.comparing(Integer::intValue));
+		Optional<Float> result = floatArray.stream() //Java Stream to Get Max Value
+				.max(Comparator.comparing(Float::floatValue));
 		return result.get();
 	}
 	

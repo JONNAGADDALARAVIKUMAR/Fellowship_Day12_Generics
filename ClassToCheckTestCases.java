@@ -1,16 +1,24 @@
 package day12;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Optional;
+public class ClassToCheckTestCases <T extends Comparable<T>> {
 
-public class ClassToCheckTestCases {
-
-	public String checkMaximum(ArrayList<String> stringArray) { //Returns Max Value
+	T returnValue;
+	public T checkMaximum(T firstStiring, T secondString, T thirdString) {
 		
-		Optional<String> result = stringArray.stream() //Java Stream to Get Max Value
-				.max(Comparator.comparing(String::length));
-		return result.get();
+		//Returns First Value if it is Maximum
+		if(firstStiring.compareTo(secondString) > 0 && firstStiring.compareTo(thirdString) > 0) {
+		
+			returnValue = firstStiring;
+		}
+		//Returns Second Value if it is Maximum
+		else if(secondString.compareTo(firstStiring) > 0 && secondString.compareTo(thirdString) > 0) {
+			returnValue = secondString;
+		}
+		//Returns Third Value if it is Maximum
+		else if(thirdString.compareTo(firstStiring) > 0 && thirdString.compareTo(secondString) > 0) {
+			returnValue = thirdString;;
+		}
+		return returnValue;
 	}
 	
 	
